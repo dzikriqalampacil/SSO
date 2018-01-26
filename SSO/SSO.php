@@ -123,7 +123,6 @@ class SSO
     $user->name = $details['nama'];
     $user->email = $details['email'];
     $user->npm = $details['npm'];
-    dd($user, $details);
 
     return $user;
   }
