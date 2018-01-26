@@ -44,7 +44,7 @@ define('CAS_SERVER_HOST', 'sso.ui.ac.id');
 /**
  * CAS server uri
  */
-define('CAS_SERVER_URI', '/cas2');
+define('CAS_SERVER_URI', '/cas3');
 
 /**
  * CAS server port
@@ -74,7 +74,7 @@ if (class_exists('phpCAS')) {
  *
  * @class     SSO
  * @category  Authentication
- * @package   SSO 
+ * @package   SSO
  * @author    Bobby Priambodo <bobby.priambodo@gmail.com>
  * @license   MIT
  */
@@ -121,20 +121,9 @@ class SSO
     $user = new \stdClass();
     $user->username = phpCAS::getUser();
     $user->name = $details['nama'];
-    $user->role = $details['peran_user'];
-
-    if ($user->role === 'mahasiswa') {
-      $user->npm = $details['npm'];
-      $user->org_code = $details['kd_org'];
-
-      $data = json_decode(file_get_contents( __DIR__ . '/additional-info.json'), true)[$user->org_code];
-      $user->faculty = $data['faculty'];
-      $user->study_program = $data['study_program'];
-      $user->educational_program = $data['educational_program'];
-    }
-    else if ($user->role === 'staff') {
-      $user->nip = $details['nip'];
-    }
+    $user->email = $details['email'];
+    $user->npm = $details['npm'];
+    dd($user, $details);
 
     return $user;
   }

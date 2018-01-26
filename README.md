@@ -1,4 +1,10 @@
-# SSO
+# SSO UI Wrapper Pointing to https://sso.ui.ac.id/cas3
+
+```
+Di fork dari from https://github.com/RistekCSUI/SSO karena /cas2 tidak dapat diakses dalam jangka waktu cukup lama.
+Informasi dari URI /cas3 tidak selengkap /cas2 sehingga tidak backward compatible.
+Repository ini tidak dimaksudkan untuk dipakai dalam jangka panjang -- setidaknya sampai terdapat klarifikasi dari DSTI tentang status /cas2.
+```
 
 Sebuah *library* PHP untuk memudahkan aplikasi menggunakan fasilitas login SSO Universitas Indonesia.
 
@@ -69,17 +75,8 @@ Fungsi `getUser()` akan mengembalikan sebuah object `stdClass` PHP yang memiliki
     $user = SSO\SSO::getUser();
     echo $user->username;             // prints user's username
     echo $user->name;                 // prints user's name
-    echo $user->role;                 // prints user's role
-
-    /* jika role sebagai mahasiswa */
     echo $user->npm;                  // prints user's npm
-    echo $user->org_code;             // prints user's organization code
-    echo $user->faculty;              // prints user's faculty
-    echo $user->study_program;        // prints user's study program
-    echo $user->educational_program;  // prints user's educational program
-
-    /* jika role sebagai staff */
-    echo $user->nip;                  // prints user's nip
+    echo $user->email;                // prints user's email
 
 ### 3. Memeriksa otentikasi
 

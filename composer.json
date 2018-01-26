@@ -1,9 +1,9 @@
 {
-  "name": "ristek/sso",
+  "name": "rickykurniawanlie/sso",
   "type": "library",
-  "description": "Utility library for authentication with SSO-UI",
+  "description": "Utility library for authentication with SSO-UI cas3",
   "keywords": ["authentication"],
-  "homepage": "http://github.com/RistekCSUI/SSO",
+  "homepage": "http://github.com/rickykurniawanlie/SSO",
   "license": "MIT",
   "authors": [
     {
