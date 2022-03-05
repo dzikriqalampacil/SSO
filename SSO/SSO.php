@@ -44,7 +44,7 @@ define('CAS_SERVER_HOST', 'sso.ui.ac.id');
 /**
  * CAS server uri
  */
-define('CAS_SERVER_URI', '/cas3');
+define('CAS_SERVER_URI', '/cas2');
 
 /**
  * CAS server port
